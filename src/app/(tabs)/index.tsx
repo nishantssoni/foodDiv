@@ -8,7 +8,7 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       {/* display image from web */}
-      <Image source={{ uri: product.image }} style={{ width: 200, height: 200 }} />
+      <Image source={{ uri: product.image }} style={styles.image} />
       <Text style={styles.title}>{product.name}</Text>
       <Text style={styles.price}>{product.price}</Text>
     </View>
@@ -16,7 +16,11 @@ export default function TabOneScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 20,
+  },
   title: {
     fontSize: 18,
     fontWeight: '600',
@@ -25,5 +29,9 @@ const styles = StyleSheet.create({
   price: {
     fontWeight: 'bold',
     color: Colors.light.tint,
+  },
+  image: {
+    width: '100%',
+    aspectRatio: 1,
   },
 });
