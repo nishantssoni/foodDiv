@@ -1,12 +1,18 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Colors from '@/src/constants/Colors';
+import {Product } from '@/src/types';
 
+export const defaultImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png'
 
-const ProductListItem = ({product}:any) => {
+type ProductListItemProps = {
+  product: Product;
+};
+
+const ProductListItem = ({product}:ProductListItemProps) => {
   return (
     <View style={styles.container}>
       {/* display image from web */}
-      <Image source={{ uri: product.image }} style={styles.image} />
+      <Image source={{ uri: product.image || defaultImage }} style={styles.image} />
       <Text style={styles.title}>{product.name}</Text>
       <Text style={styles.price}>{product.price}</Text>
     </View>
