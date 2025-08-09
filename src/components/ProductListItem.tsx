@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Colors from '@/src/constants/Colors';
-import {Product } from '@/src/types';
+import { Product } from '@/src/types';
 
 export const defaultImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png'
 
